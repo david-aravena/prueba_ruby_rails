@@ -1,2 +1,33 @@
-<h1>Properties#edit</h1>
-<p>Find me in app/views/properties/edit.html.erb</p>
+<h2> Editar propiedad </h2>
+
+<%= form_with(url: update_property_path(@property.id), model: @property, local: true) do |form| %>
+    <div>
+        <%= form.label :Direccion %>
+        <%= form.text_field :address %>
+    </div>
+    <div>
+        <%= form.label :Precio %>
+        <%= form.number_field :price %>
+    </div>
+    <div>
+        <%= form.label "Area mts2" %>
+        <%= form.number_field :area %>
+    </div>
+    <div>
+        <%= form.label "Numero habitaciones" %>
+        <%= form.number_field :rooms %>
+    </div>
+    <div>
+        <%= form.label "Numero baños" %>
+        <%= form.number_field :toilets %>
+    </div>
+    <div>
+        <%= form.label "Foto" %>
+        <%= form.text_field :photo %>
+    </div>
+    <div>
+        <%= form.submit "Editar propiedad" %>
+    </div>
+<% end %>
+
+<%= link_to "volver al home", root_path %>
