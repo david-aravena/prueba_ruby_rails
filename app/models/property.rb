@@ -16,4 +16,10 @@ class Property < ApplicationRecord
     def self.searchAddress(address, userId)
         self.where("address LIKE ? AND user_id = #{userId}", "%#{address}%")
     end
+
+    def self.createProperty(strong_params, user_id)
+        property = self.new(strong_params)
+        property.user_id = user_id
+        return property
+    end
 end
