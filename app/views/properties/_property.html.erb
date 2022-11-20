@@ -6,7 +6,7 @@
     <li>Baños: <%=property.toilets%> </li>
     <li>Precio: <%=property.price%> </li>
     <li>Foto: <%=property.photo%> </li>
-    <li><span> <%= button_to "editar", edit_property_path(property.id) %> </span> <span> <%= button_to "eliminar", delete_property_path(property.id), form: { data: { turbo_confirm: "¿Seguro que quiere borrarlo?" } }, method: :delete %> </span></li>
+    <li><span> <%= button_to "editar", edit_property_path(property.id), method: :get %> </span> <span> <%= button_to "eliminar", delete_property_path(property.id), form: { data: { turbo_confirm: "¿Seguro que quiere borrarlo?" } }, method: :delete %> </span></li>
 </ul>
 <br/>
 <br/>

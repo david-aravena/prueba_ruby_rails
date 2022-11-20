@@ -22,3 +22,7 @@
 <%= render @properties %>
 
 <%= will_paginate @properties %>
+
+<% if params[:number_toilets] || params[:number_rooms] || params[:address] %>
+   <%= link_to "ver todas las propiedades", root_path %>
+<% end %>
