@@ -1,7 +1,20 @@
 class PropertiesController < ApplicationController
   def index
-    @properties = Property.where(user_id: current_user.id)
+    @properties = Property.userProperties(current_user.id)
+
+    if params[:number_toilets]
+      @properties = Property.searchToiletsNumber(params[:number_toilets], current_user.id)
+    end
+
+    if params[:number_rooms]
+      @properties = Property.searchRoomsNumber(params[:number_rooms], current_user.id)
+    end
+
+    if params[:address]
+      @properties = Property.searchAddress(params[:address], current_user.id)
+    end
   end
+
 
   def new
     @property = Property.new
