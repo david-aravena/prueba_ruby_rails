@@ -5,6 +5,13 @@
     <li>Habitaciones: <%=property.rooms%> </li>
     <li>Baños: <%=property.toilets%> </li>
     <li>Precio: <%=property.price%> </li>
+    <% if property.uploads.attached? %>
+        <% property.uploads.each do |upload| %>
+            <%= link_to upload.filename, upload, target: '_blank' %> <br/>
+        <% end %>
+    <% else %>
+        <li>sin imagenes</li>
+    <% end %>
     <li>Foto: <%=property.photo%> </li>
     <li><span> <%= button_to "editar", edit_property_path(property.id), method: :get %> </span> <span> <%= button_to "eliminar", delete_property_path(property.id), form: { data: { turbo_confirm: "¿Seguro que quiere borrarlo?" } }, method: :delete %> </span></li>
 </ul>

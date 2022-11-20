@@ -23,7 +23,7 @@
     </div>
     <div>
         <%= form.label "Foto" %>
-        <%= form.text_field :photo %>
+        <%= form.file_field :uploads, multiple: true %>
     </div>
     <div>
         <%= form.submit "Crear propiedad" %>

@@ -1,5 +1,6 @@
 class Property < ApplicationRecord
     belongs_to :user
+    has_many_attached :uploads
 
     def self.userProperties(userId)
         self.where(user_id: userId)
