@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   
 
   get 'properties/edit/:id', to: 'properties#edit', as: 'edit_property'
-  get 'properties/delete/:id', to: 'properties#destroy', as: 'delete_property'
+  delete 'properties/delete/:id', to: 'properties#destroy', as: 'delete_property'
 end

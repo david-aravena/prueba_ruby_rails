@@ -14,7 +14,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%if user_signed_in? %>
-    <%= link_to "cerrar sesion", destroy_user_session_path %>
+      <%= link_to "cerrar sesion", destroy_user_session_path %>
       <p>conectado como: <%= current_user.email %> </p>
     <% end %>
     <%= yield %>
