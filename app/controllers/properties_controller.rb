@@ -13,6 +13,8 @@ class PropertiesController < ApplicationController
     if params[:address]
       @properties = Property.searchAddress(params[:address], current_user.id)
     end
+
+    @properties = @properties.paginate(page: params[:page], per_page: 2)
   end
 
 

@@ -14,6 +14,6 @@ class Property < ApplicationRecord
     end
 
     def self.searchAddress(address, userId)
-        self.where("address LIKE ?", "%#{address}%")
+        self.where("address LIKE ? AND user_id = #{userId}", "%#{address}%")
     end
 end
