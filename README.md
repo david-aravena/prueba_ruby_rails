@@ -11,7 +11,7 @@ https://quiet-meadow-65038.herokuapp.com/
 -rails 7.0.4
 -ejecutar bundle install
 
-##Deuda tecnica
+## Deuda tecnica
 -En la busqueda por direccion definir que no se tomen encuenta mayusculas y minusculas.
 -Los buscadores por baño, habitaciones y direccion deben ser 1 solo input.
 -Crear un seed que cree contraseñas de la forma que lo hace devise (encriptadas) para crear usuarios en el  modelo de devise.
