@@ -9,5 +9,6 @@
 }
 
 .property{
-    border: 1px solid black;
+    border: 1px solid rgb(169, 167, 167);
+    background-color: rgba(0, 0, 0, 0.1);
 }

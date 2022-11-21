@@ -46,6 +46,8 @@ gem "devise"
 
 gem 'will_paginate', '~> 3.3'
 
+gem 'rails-erd', '~> 1.4', '>= 1.4.7'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
