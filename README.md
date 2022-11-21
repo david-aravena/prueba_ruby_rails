@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Link para probar la pagina
+https://quiet-meadow-65038.herokuapp.com/
 
-Things you may want to cover:
+## Diagrama db
+(https://raw.githubusercontent.com/david-aravena/prueba_ruby_rails/main/assets/images/diagramadb.png)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Instrucciones para instalar para desarrollo
+-ruby 3.1.0
+-rails 7.0.4
+-ejecutar bundle install
