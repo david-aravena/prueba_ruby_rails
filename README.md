@@ -19,3 +19,7 @@ https://quiet-meadow-65038.herokuapp.com/
 -Los buscadores por baño, habitaciones y direccion deben ser 1 solo input.
 
 -Crear un seed que cree contraseñas de la forma que lo hace devise (encriptadas) para crear usuarios en el  modelo de devise.
+
+-validaciones para inputs y modelo
+
+-manejo de errores
