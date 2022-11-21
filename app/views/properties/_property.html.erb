@@ -1,4 +1,4 @@
-<ul>
+<ul class="property">
     <li>Encargado: <%=property.user.email%> </li>
     <li>Direccion: <%=property.address%> </li>
     <li>Area: <%=property.area%>m<sup>2</sup> </li>
@@ -6,14 +6,16 @@
     <li>Baños: <%=property.toilets%> </li>
     <li>Precio: <%=property.price%> </li>
     <% if property.uploads.attached? %>
-        <% property.uploads.each do |upload| %>
-            <%= link_to upload.filename, upload, target: '_blank' %> <br/>
-        <% end %>
+        <li>imagenes</li>
+        <ul>
+            <% property.uploads.each do |upload| %>
+            <li> <%= link_to upload.filename, upload, target: '_blank' %> <br/> </li>
+            <% end %>
+        </ul>
     <% else %>
         <li>sin imagenes</li>
     <% end %>
-    <li>Foto: <%=property.photo%> </li>
-    <li><span> <%= button_to "editar", edit_property_path(property.id), method: :get %> </span> <span> <%= button_to "eliminar", delete_property_path(property.id), form: { data: { turbo_confirm: "¿Seguro que quiere borrarlo?" } }, method: :delete %> </span></li>
+    <li><span> <%= button_to "editar", edit_property_path(property.id), method: :get %> </span> <br/> <span> <%= button_to "eliminar", delete_property_path(property.id), form: { data: { turbo_confirm: "¿Seguro que quiere borrarlo?" } }, method: :delete %> </span></li>
 </ul>
 <br/>
 <br/>

@@ -6,13 +6,13 @@
     <%= f.number_field :number_toilets %>
     <%= f.submit "buscar" %>
  <% end %>
-
+   <br/>
  <%= form_with url: search_number_rooms_path, remote: true, method: :get do |f| %>
     <%= f.label "buscar por cantidad de habitaciones" %>
     <%= f.number_field :number_rooms %>
     <%= f.submit "buscar" %>
  <% end %>
-
+ <br/>
  <%= form_with url: search_address_path, remote: true, method: :get do |f| %>
     <%= f.label "buscar por direccion" %>
     <%= f.text_field :address %>

@@ -23,8 +23,9 @@
     </div>
     <div>
         <%= form.label "Foto" %>
-        <%= form.text_field :photo %>
+        <%= form.file_field :uploads, multiple: true %>
     </div>
+    <br/>
     <div>
         <%= form.submit "Editar propiedad" %>
     </div>
