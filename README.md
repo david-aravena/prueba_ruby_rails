@@ -8,7 +8,9 @@ https://quiet-meadow-65038.herokuapp.com/
 
 ## Instrucciones para instalar para desarrollo
 -ruby 3.1.0
+
 -rails 7.0.4
+
 -ejecutar bundle install
 
 ## Deuda tecnica
